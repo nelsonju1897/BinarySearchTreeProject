@@ -24,7 +24,10 @@ namespace BinaryTreeSearch
             bst.addNode(100);
             bst.addNode(5);
             bst.addNode(10);
-            Console.ReadLine();
+            bst.searchNode(11);
+            bst.searchNode(10);
+            bst.searchNode(120);
+            Console.ReadLine(); 
         }
     }
 }

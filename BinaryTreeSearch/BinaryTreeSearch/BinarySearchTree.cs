@@ -51,10 +51,35 @@ namespace BinaryTreeSearch
 
         }
 
-        public void searchNode(int data)
+        public bool searchNode(int num)
         {
-
+            Node current = root;
+            while (true)
+            {
+                if (num == current.item)
+                {
+                    Console.WriteLine("Found:" + num);
+                    return true;
+                }
+                else
+                {
+                    if (num <= current.item)
+                    {
+                        current = current.left;
+                    }
+                    else
+                    {
+                        current = current.right;
+                    }
+                }
+                if (current == null)
+                {
+                    Console.WriteLine(num + " not found");
+                    return false;
+                }
+            }
         }
+            
 
     }
 }
